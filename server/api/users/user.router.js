@@ -25,11 +25,11 @@ router.get('/', function (req, res, next) {
 });
 
 router.post('/', function (req, res, next) {
-	console.log("about to create..!")
+	console.log("about to create..!");
 	User.create(req.body)
 	.then(function (user) {
-		console.log(user,"created!")
-		req.session.user=user;
+		console.log(user,"created!");
+		req.session.user = user;
 		res.status(201).json(user);
 
 	})
